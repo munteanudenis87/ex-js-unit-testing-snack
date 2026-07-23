@@ -4,7 +4,7 @@ function getInitials(fullName){
 }
 
 function createSlug(str){
-    return str.toLowerCase();
+    return str.toLowerCase().replaceAll(" ", "-");
 }
 
 function average(num){
