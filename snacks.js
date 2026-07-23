@@ -22,4 +22,8 @@ function isPalindrome(parola){
     return parola.trim() === parolaInv;
 }
 
-module.exports = { getInitials, createSlug, average, isPalindrome }
+function findPostById(posts, id){
+    return posts.find(post => post.id === id);
+}
+
+module.exports = { getInitials, createSlug, average, isPalindrome, findPostById }
