@@ -7,4 +7,12 @@ function createSlug(str){
     return str.toLowerCase();
 }
 
-module.exports = { getInitials, createSlug }
+function average(num){
+    let somma = 0;
+    num.forEach(n => {
+        somma += n;
+    });
+    return somma / num.length;
+}
+
+module.exports = { getInitials, createSlug, average }
