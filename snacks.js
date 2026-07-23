@@ -4,6 +4,9 @@ function getInitials(fullName){
 }
 
 function createSlug(str){
+    if(!str){
+        throw new Error('Non valido')
+    }
     return str.toLowerCase().replaceAll(" ", "-");
 }
 
@@ -15,8 +18,8 @@ function average(num){
     return somma / num.length;
 }
 function isPalindrome(parola){
-    const parolaInv = parola.split('').reverse().join('');
-    return parola === parolaInv;
+    const parolaInv = parola.trim().split('').reverse().join('');
+    return parola.trim() === parolaInv;
 }
 
 module.exports = { getInitials, createSlug, average, isPalindrome }
